@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.scss"
 export interface ButtonType {
   label: string;
   icon?: React.ReactNode;
@@ -18,7 +19,7 @@ export const Button: React.FC<ButtonType> = ({
   return (
     <button
       type={type}
-      className={`flex itmes-center justify-center rounded text-white text-md p-2 bg-primary`}
+      className={`flex custom itmes-center justify-center rounded text-white text-md p-2 bg-primary`}
       onClick={onClick}
     >
       {icon && <span className="mr-2 text-red">{icon}</span>}

@@ -1,0 +1,38 @@
+.container{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    background: url("../../../assets/auth_pic/login_signup_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box_frame{
+        width: 25%;
+        height: 60%;
+        border-radius: 15px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        .header_pic{
+            h1{
+                text-align: center;
+                padding-top: 20px;
+                .login_img{
+                    width: 120px;
+                    height: auto;
+                }
+            }
+        }
+        .input_boxes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div{
+              margin-bottom: 5px;
+            }
+        }
+    }
+}

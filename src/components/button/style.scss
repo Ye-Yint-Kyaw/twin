@@ -1,0 +1,38 @@
+.custom{
+  box-shadow: none;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: bolder;
+  text-transform: none;
+  padding: 6px 12px;
+  width: 51%;
+  border: 1px solid;
+  line-height: 1.5;
+  background-color: #ff4d00;
+  border-color: #ff4d00;
+  &:hover{
+    background-color: #ff3600;
+    border-color: #ff3600;
+    cursor: pointer;
+  }
+  &:active{
+    background-color: #cf3e00;
+    border-color: #cf3e00;
+  }
+  &:focus{
+    box-shadow: 0 0 0 0.2rem rgba(205, 62, 0, 0.5);
+  }
+}
+//   &:hover: {
+//     backgroundColor: '#0069d9',
+//     borderColor: '#0062cc',
+//     boxShadow: 'none',
+//   },
+//   '&:active': {
+//     boxShadow: 'none',
+//     backgroundColor: '#0062cc',
+//     borderColor: '#005cbf',
+//   },
+//   '&:focus': {
+//     boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+//   }
