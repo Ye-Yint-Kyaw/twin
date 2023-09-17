@@ -32,7 +32,7 @@
 //   );
 // };
 
-import { TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 
 export interface InputType{
   type?: string;
@@ -53,12 +53,18 @@ export const Input: React.FC<InputType> = ({
 }) => {
   return (
     <div>
+      <Box   
+      sx={{
+        width: 320,
+        maxWidth: '100%',
+      }}>
       <TextField
-      id="standard-search"
+      fullWidth
       label={label}
       type={type}
       variant="standard"
       />
+      </Box>
     </div>
   );
 }
