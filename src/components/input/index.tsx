@@ -33,22 +33,27 @@
 // };
 
 import { Box, TextField } from "@mui/material";
-
+import "./style.scss"
 export interface InputType{
   type?: string;
   name?: string;
+  error?: boolean;
   placeholder?: string;
   label?: string;
+  className?: string;
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  errorText?: string;
   
 }
 
 export const Input: React.FC<InputType> = ({
   type,
-  label
+  label,
+  error,
+  errorText
 
 }) => {
   return (
@@ -59,10 +64,12 @@ export const Input: React.FC<InputType> = ({
         maxWidth: '100%',
       }}>
       <TextField
+      error = {error}
       fullWidth
       label={label}
       type={type}
       variant="standard"
+      helperText={errorText}
       />
       </Box>
     </div>
