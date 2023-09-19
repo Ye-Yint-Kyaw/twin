@@ -12,7 +12,6 @@
     align-items: center;
     .box_frame{
         width: 25%;
-        height: 60%;
         border-radius: 15px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         .header_pic{
@@ -20,9 +19,15 @@
                 text-align: center;
                 padding-top: 20px;
                 .login_img{
-                    width: 120px;
+                    width: 90px;
                     height: auto;
                 }
+            }
+            h2{
+                text-align: center;
+                color: #737373;
+                font-weight: bolder;
+                margin-bottom: 12px;
             }
         }
         .input_boxes{
@@ -32,6 +37,23 @@
             align-items: center;
             div{
               margin-bottom: 5px;
+            }
+            button{
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 14px;
+                color: hsl(0, 0%, 45%);
+                opacity: 0.9;
+                margin-bottom: 20px;
+            }
+            span{
+                text-decoration: underline;
+                font-style: italic;
+                cursor: pointer;
+                &:hover{
+                    font-weight: 600;
+                }
             }
         }
     }

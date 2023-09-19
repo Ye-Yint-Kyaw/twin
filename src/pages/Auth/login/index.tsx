@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "../common-scss/style.scss";
 import "./scss/style.scss";
-import login_pic from "../../../assets/auth_pic/Login_In.png";
+import login_pic from "../../../assets/auth_pic/login.png";
 import { Input } from "../../../components/input";
 import { Button } from "../../../components/button";
 import { useNavigate } from "react-router-dom";
@@ -11,8 +11,7 @@ import Snackbar from "@mui/material/Snackbar/Snackbar";
 
 
 const Login: React.FC<object> = () => {
-  const navigate = useNavigate(); // Get the history object
-
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -32,7 +31,7 @@ const Login: React.FC<object> = () => {
   // };
 
   const handleLogin = () => {
-    if (!email && !password) {
+    if (email === "" || password === "") {
       // Both email and password are empty, set the error state to true
       setError("Invalid credentials. Please try again.");
       setSnackbarOpen(true);
@@ -55,6 +54,9 @@ const Login: React.FC<object> = () => {
           <h1>
             <img className="login_img" src={login_pic} alt="Login Image" />
           </h1>
+          <h2>
+            LOGIN
+          </h2>
         </div>
         <div className="input_boxes">
           <Input
@@ -74,10 +76,11 @@ const Login: React.FC<object> = () => {
             errorText={error ? "Invalid credentials. Please try again." : ""}
           />
           <Button type="button" label="LOGIN" onClick={handleLogin} />
+          <p> If you don't have an account, <span>register here. </span> </p>
           {snackbarOpen && (
           <Snackbar 
           open 
-          anchorOrigin={{vertical:"bottom", horizontal: "center"}}
+          anchorOrigin={{vertical:"top", horizontal: "center"}}
           autoHideDuration={2000} 
           onClose={handleClose}>
             <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>

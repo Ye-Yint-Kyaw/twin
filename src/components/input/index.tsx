@@ -53,7 +53,8 @@ export const Input: React.FC<InputType> = ({
   type,
   label,
   error,
-  errorText
+  errorText,
+  onChange
 
 }) => {
   return (
@@ -69,6 +70,7 @@ export const Input: React.FC<InputType> = ({
       label={label}
       type={type}
       variant="standard"
+      onChange={onChange}
       helperText={errorText}
       />
       </Box>
